@@ -300,7 +300,10 @@ static void Widget_OnDestroy( void *arg )
 
 void Widget_ExecDestroy( LCUI_Widget widget )
 {
-	LCUI_WidgetEventRec e = { WET_DESTROY, 0 };
+	LCUI_WidgetEventRec e;
+	e.type = WET_DESTROY;
+	e.cancel_bubble = TRUE;
+	_DEBUG_MSG( "widget: %p, type: %s\n", widget, widget->type );
 	Widget_TriggerEvent( widget, &e, NULL );
 	Widget_ReleaseMouseCapture( widget );
 	Widget_ReleaseTouchCapture( widget, -1 );
