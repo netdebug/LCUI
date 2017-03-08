@@ -20,6 +20,7 @@ test/testtouch.c \
 test/test_string.c \
 test/test_string_render.c \
 test/test_widget_render.c \
+test/test_widget_destroy.c \
 test/test_char_render.c \
 test/test_css_parser.css \
 test/test_css_parser.xml \

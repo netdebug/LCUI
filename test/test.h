@@ -6,4 +6,5 @@ int test_css_parser( void );
 int test_char_render( void );
 int test_string_render( void );
 int test_widget_render( void );
+int test_widget_destroy( void );
 int test_image_reader( void );
